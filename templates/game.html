@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Icon Guessing Game</title>
+
+        <link rel="stylesheet" href="assets/game.css">
+    </head>
+    <body>
+        <p id="data" style="display: none;">{{ data }}</p>
+
+        <div class="center">
+            <div id="game_div" style="display: none;" class="card">
+                <div class="card-header">
+                    <h2 id="icon_title" class="card-title"></h2>
+                </div>
+                <div class="card-content">
+                    <div id="icon_image" alt="icon"></div><br>
+                    <div id="form">
+                        <input type="text" id="guess_input" placeholder="Guess here..."><br>
+                        <div id="buttons">
+                            <button onclick="guess()" style="width: 50%; margin-right: 5px;" id="guess_btn">Guess</button>
+                            <button onclick="skip()" style="width: 50%;" id="skip_btn">Skip</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div id="completed_div" style="display: block;" class="card">
+                <div class="card-header">
+                    <h2 class="card-title">You completed the quiz!</h2>
+                </div>
+                <div class="card-content">
+                    <p id="completed_parag" style="margin-bottom: 20px; font-size: 1.25em;"></p>
+                    <table>
+                        <tr>
+                            <th>Correct</th>
+                            <th>Incorrect</th>
+                            <th>Skipped</th>
+                        </tr>
+                        <tr>
+                            <td id="correct_td"></td>
+                            <td id="incorrect_td"></td>
+                            <td id="skipped_td"></td>
+                        </tr>
+                    </table>
+                    <div id="form">
+                        <button onclick="reset()">Play Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/game.js"></script>
+    </body>
+</html>
